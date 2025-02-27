@@ -20,12 +20,10 @@ const Login: React.FC = () => {
       localStorage.setItem("refresh_token", data.refresh);
       localStorage.setItem("username", data.username);
       // setLoading(false)
-      //   redirect home
       toast.success("Login successful");
-      // Move the redirect after a short delay
       setTimeout(() => {
         window.location.href = "/";
-      }, 1000); // Wait 1 second for the toast to show
+      }, 1000); 
     } catch (err: any) {
       setLoading(false);
       toast.error(err.message);
@@ -34,7 +32,8 @@ const Login: React.FC = () => {
   };
 
   return (
-    <div className="font-default md:w-1/2 m-auto p-3">
+    <div className="px-3 font-default md:w-1/2 m-auto min-h-screen flex flex-col justify-center">
+      <div className="p-6 md:p-12">
       <h2 className="text-3xl font-bold text-[#008374] mb-6 text-center">
         Welcome back, Login
       </h2>
@@ -45,7 +44,7 @@ const Login: React.FC = () => {
           value={username}
           onChange={(e) => setLocalUsername(e.target.value)}
           required
-          className="border border-gray-300 rounded-md p-3"
+          className="border border-gray-300 rounded-md p-3 outline-none focus:ring-1 focus:ring-[#66fdee]"
         />
         <input
           type="password"
@@ -53,11 +52,11 @@ const Login: React.FC = () => {
           value={password}
           onChange={(e) => setPassword(e.target.value)}
           required
-          className="border border-gray-300 rounded-md p-3"
+          className="border border-gray-300 rounded-md p-3 outline-none focus:ring-1 focus:ring-[#66fdee]"
         />
         <button
           type="submit"
-          className="bg-[#008374] text-white p-3 rounded-lg"
+          className="bg-[#008374] text-white p-3 rounded-lg outline-none focus:ring-1 focus:ring-[#66fdee]"
         >
           {loading ? <BeatLoader loading={loading} /> : "Login"}
         </button>
@@ -69,6 +68,7 @@ const Login: React.FC = () => {
           Register
         </Link>
       </p>
+      </div>
     </div>
   );
 };
