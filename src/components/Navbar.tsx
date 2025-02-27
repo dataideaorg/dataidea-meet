@@ -10,7 +10,7 @@ interface NavLinkProps {
 
 const NavLink: React.FC<NavLinkProps> = ({ href, label, external }) => {
   const baseClasses =
-    "transition-all duration-300 text-white/90 hover:text-white hover:bg-[#dd8604] rounded-md px-3 py-2";
+    "transition-all duration-300 text-white/90 hover:text-white hover:bg-[#008374] rounded-md px-3 py-2";
 
   return external ? (
     <a
@@ -78,7 +78,7 @@ const Navbar: React.FC = () => {
           href={item.href}
           target="_blank"
           rel="noopener noreferrer"
-          className="block px-4 py-2 text-gray-700 hover:bg-[#DD8604]/10 transition-colors duration-200"
+          className="block px-4 py-2 text-gray-700 hover:bg-[#008374]/10 transition-colors duration-200"
         >
           {item.label}
         </a>
@@ -89,7 +89,7 @@ const Navbar: React.FC = () => {
   return (
     <nav
       ref={navRef}
-      className="bg-[#DD8604] w-full shadow-md sticky top-0 z-50 backdrop-blur-sm"
+      className="bg-[#008374] w-full shadow-md sticky top-0 z-50 backdrop-blur-sm"
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-20 items-center justify-between">
@@ -108,14 +108,14 @@ const Navbar: React.FC = () => {
             <NavLink href="/" label="Home" />
 
             {/* Desktop Dropdowns */}
-            {[/*"resources", "community" */].map((menuType) => (
+            {["resources", "community"].map((menuType) => (
               <div key={menuType} className="relative">
                 <button
                   onClick={() =>
                     setActiveMenu(activeMenu === menuType ? null : menuType)
                   }
-                  className={`transition-all duration-300 text-white/90 hover:text-white hover:bg-[#dd8604] rounded-md px-3 py-2 capitalize
-                    ${activeMenu === menuType ? "bg-[#dd8604]" : ""}`}
+                  className={`transition-all duration-300 text-white/90 hover:text-white hover:bg-[#008374] rounded-md px-3 py-2 capitalize
+                    ${activeMenu === menuType ? "bg-[#008374]" : ""}`}
                 >
                   {menuType}
                 </button>
@@ -133,8 +133,8 @@ const Navbar: React.FC = () => {
                 onClick={() =>
                   setActiveMenu(activeMenu === "account" ? null : "account")
                 }
-                className={`transition-all duration-300 text-white/90 hover:text-white hover:bg-[#dd8604] rounded-md px-3 py-2
-                  ${activeMenu === "account" ? "bg-[#dd8604]" : ""}`}
+                className={`transition-all duration-300 text-white/90 hover:text-white hover:bg-[#008374] rounded-md px-3 py-2
+                  ${activeMenu === "account" ? "bg-[#008374]" : ""}`}
               >
                 {username ? username : "Account"}
               </button>
@@ -143,7 +143,7 @@ const Navbar: React.FC = () => {
                   {username ? (
                     <button
                       onClick={logout}
-                      className="w-full text-left px-4 py-2 text-gray-700 hover:bg-[#DD8604]/10 transition-colors duration-200"
+                      className="w-full text-left px-4 py-2 text-gray-700 hover:bg-[#008374]/10 transition-colors duration-200"
                     >
                       Logout
                     </button>
@@ -151,13 +151,13 @@ const Navbar: React.FC = () => {
                     <>
                       <Link
                         to="/login"
-                        className="block px-4 py-2 text-gray-700 hover:bg-[#DD8604]/10 transition-colors duration-200"
+                        className="block px-4 py-2 text-gray-700 hover:bg-[#008374]/10 transition-colors duration-200"
                       >
                         Login
                       </Link>
                       <Link
                         to="/register"
-                        className="block px-4 py-2 text-gray-700 hover:bg-[#DD8604]/10 transition-colors duration-200"
+                        className="block px-4 py-2 text-gray-700 hover:bg-[#008374]/10 transition-colors duration-200"
                       >
                         Register
                       </Link>
@@ -171,7 +171,7 @@ const Navbar: React.FC = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setMobileMenuOpen(!isMobileMenuOpen)}
-            className="md:hidden p-2 rounded-md text-white hover:bg-[#dd8604] transition-colors duration-200"
+            className="md:hidden p-2 rounded-md text-white hover:bg-[#008374] transition-colors duration-200"
           >
             <span className="sr-only">Toggle menu</span>
             {isMobileMenuOpen ? (
@@ -224,7 +224,7 @@ const Navbar: React.FC = () => {
                     href={item.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="block text-white/80 hover:bg-[#dd8604] rounded-md px-3 py-2 transition-colors duration-200"
+                    className="block text-white/80 hover:bg-[#008374] rounded-md px-3 py-2 transition-colors duration-200"
                   >
                     {item.label}
                   </a>
@@ -240,7 +240,7 @@ const Navbar: React.FC = () => {
                   </div>
                   <button
                     onClick={logout}
-                    className="w-full text-left text-white/80 hover:bg-[#dd8604] rounded-md px-3 py-2 transition-colors duration-200"
+                    className="w-full text-left text-white/80 hover:bg-[#008374] rounded-md px-3 py-2 transition-colors duration-200"
                   >
                     Logout
                   </button>
@@ -249,13 +249,13 @@ const Navbar: React.FC = () => {
                 <>
                   <Link
                     to="/login"
-                    className="block text-white/80 hover:bg-[#dd8604] rounded-md px-3 py-2 transition-colors duration-200"
+                    className="block text-white/80 hover:bg-[#008374] rounded-md px-3 py-2 transition-colors duration-200"
                   >
                     Login
                   </Link>
                   <Link
                     to="/register"
-                    className="block text-white/80 hover:bg-[#dd8604] rounded-md px-3 py-2 transition-colors duration-200"
+                    className="block text-white/80 hover:bg-[#008374] rounded-md px-3 py-2 transition-colors duration-200"
                   >
                     Register
                   </Link>

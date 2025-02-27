@@ -40,7 +40,7 @@ const HomePage: React.FC = () => {
             
             <button
               type="submit"
-              className="w-full bg-[#DD8604] text-white py-2 px-4 rounded-md shadow-sm hover:bg-[#DD8604] focus:outline-none focus:ring-2 focus:ring-[#66FDEE]"
+              className="w-full bg-[#008374] text-white py-2 px-4 rounded-md shadow-sm hover:bg-[#008374] focus:outline-none focus:ring-2 focus:ring-[#66FDEE]"
             >
               Join Meeting
             </button>

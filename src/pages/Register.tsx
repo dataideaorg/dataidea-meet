@@ -32,7 +32,7 @@ const Register: React.FC = () => {
 
   return (
     <div className="font-default md:w-1/2 m-auto p-3">
-      <h2 className="text-3xl font-bold text-[#DD8604] mb-6 text-center">
+      <h2 className="text-3xl font-bold text-[#008374] mb-6 text-center">
         Welcome, Register
       </h2>
       <form onSubmit={handleSubmit} className="flex flex-col space-y-3">
@@ -88,7 +88,7 @@ const Register: React.FC = () => {
         />
         <button
           type="submit"
-          className="bg-[#DD8604] text-white p-3 rounded-lg"
+          className="bg-[#008374] text-white p-3 rounded-lg"
         >
           {loading ? <BeatLoader loading={loading} /> : "Register"}
         </button>
@@ -96,7 +96,7 @@ const Register: React.FC = () => {
       {error && <p className="text-red-500 underline p-3">{error}</p>}
       <p className="text-center mt-3">
         Already have an account?{" "}
-        <Link to="/login" className="text-[#DD8604] underline">
+        <Link to="/login" className="text-[#008374] underline">
           Login
         </Link>
       </p>
