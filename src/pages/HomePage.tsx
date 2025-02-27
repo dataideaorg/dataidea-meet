@@ -56,7 +56,7 @@ const HomePage: React.FC = () => {
         </div>
       </main>
       <footer className="bg-gray-800 w-full py-4 text-center text-white">
-        &copy; 2025 EASI Meet. All rights reserved.
+        &copy; 2025 DATAIDEA Meet. All rights reserved.
       </footer>
     </div>
   );

@@ -95,11 +95,11 @@ const Navbar: React.FC = () => {
         <div className="flex h-20 items-center justify-between">
           {/* Logo Section */}
           <Link
-            to="https://easi.ac.ug/"
+            to="https://www.dataidea.org/"
             className="group flex items-center space-x-2"
           >
             <span className="font-heading text-white text-3xl font-bold transition-all duration-300 group-hover:text-[#66fdee]">
-              EASI
+              DATAIDEA
             </span>
           </Link>
 
