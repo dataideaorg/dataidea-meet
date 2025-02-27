@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
 import { BeatLoader } from "react-spinners";
-import { toast } from "react-toastify";
 
 const HomePage: React.FC = () => {
   const navigate = useNavigate();
